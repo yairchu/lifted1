@@ -1,0 +1,33 @@
+name:                lifted1
+version:             0.1.0.0
+github:              "yairchu/lifted1"
+license:             BSD3
+author:              "Yair Chuchem"
+maintainer:          "yairchu@gmail.com"
+copyright:           "2019 Yair Chuchem"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+category: Generics
+description: Classes lifted to type constructors
+
+dependencies:
+- base >= 4.7 && < 5
+- constraints
+- generic-constraints
+
+library:
+  source-dirs: src
+
+tests:
+  lifted1-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - lifted1
